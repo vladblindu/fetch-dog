@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a0545524-6c7b-4b7c-a37e-06ef69d0b5f8" name="Default Changelist" comment="init">
+      <changelist_data name="vlad.blindu@bitbrother.ro" email="" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="vlad.blindu@bitbrother.ro" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/README.md" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1f6AYfMNUn5Yc0EgVrAVFav9FOW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a0545524-6c7b-4b7c-a37e-06ef69d0b5f8" name="Default Changelist" comment="" />
+      <created>1595528218134</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595528218134</updated>
+      <workItem from="1595528223608" duration="1095000" />
+    </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1595528470265</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1595528470265</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="579" y="247" width="764" height="320" key="#Notifications" timestamp="1595529153756">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state x="579" y="247" width="764" height="320" key="#Notifications/0.23.1440.810@0.23.1440.810" timestamp="1595529153756" />
+    <state x="355" y="197" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595528997587">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state x="355" y="197" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.810@0.23.1440.810" timestamp="1595528997587" />
+    <state x="144" y="70" key="DiffContextDialog" timestamp="1595529014171">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state x="144" y="70" key="DiffContextDialog/0.23.1440.810@0.23.1440.810" timestamp="1595529014171" />
+    <state x="560" y="287" width="681" height="272" key="Github.ShareDialog" timestamp="1595528495193">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state x="560" y="287" width="681" height="272" key="Github.ShareDialog/0.23.1440.810@0.23.1440.810" timestamp="1595528495193" />
+    <state x="104" y="23" key="SettingsEditor" timestamp="1595529326997">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state x="104" y="23" key="SettingsEditor/0.23.1440.810@0.23.1440.810" timestamp="1595529326997" />
+    <state x="220" y="82" key="Vcs.Push.Dialog.v2" timestamp="1595529052549">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state x="220" y="82" key="Vcs.Push.Dialog.v2/0.23.1440.810@0.23.1440.810" timestamp="1595529052549" />
+    <state x="426" y="280" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1595528850849">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state x="426" y="280" key="git4idea.remote.GitConfigureRemotesDialog/0.23.1440.810@0.23.1440.810" timestamp="1595528850849" />
+  </component>
+</project>
