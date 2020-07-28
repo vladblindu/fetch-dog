@@ -10,10 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0545524-6c7b-4b7c-a37e-06ef69d0b5f8" name="Default Changelist" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/helpers.js" afterDir="false" />
+    <list default="true" id="a0545524-6c7b-4b7c-a37e-06ef69d0b5f8" name="Default Changelist" comment="major refactor and cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/unit.specs.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/unit.specs.js" afterDir="false" />
     </list>
@@ -76,7 +76,7 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
   </component>
-  <component name="RunManager" selected="Mocha.fetch-dog unit test suite.helpers unit tests.callType.should return IS_DEFAULT">
+  <component name="RunManager" selected="Mocha.fetch-dog unit test suite">
     <configuration name="server.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="example/src/server.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
@@ -91,78 +91,7 @@
       <test-file>$PROJECT_DIR$/test/unit.specs.js</test-file>
       <method v="2" />
     </configuration>
-    <configuration name="fetch-dog unit test suite.helpers unit tests.callType.should return IS_DEFAULT" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <ui>bdd</ui>
-      <extra-mocha-options>-r esm</extra-mocha-options>
-      <test-kind>TEST</test-kind>
-      <test-file>$PROJECT_DIR$/test/unit.specs.js</test-file>
-      <test-names>
-        <name value="fetch-dog unit test suite" />
-        <name value="helpers unit tests" />
-        <name value="callType" />
-        <name value="should return IS_DEFAULT" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="fetch-dog unit test suite.helpers unit tests.callType.should return IS_GQL" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <ui>bdd</ui>
-      <extra-mocha-options>-r esm</extra-mocha-options>
-      <test-kind>TEST</test-kind>
-      <test-file>$PROJECT_DIR$/test/unit.specs.js</test-file>
-      <test-names>
-        <name value="fetch-dog unit test suite" />
-        <name value="helpers unit tests" />
-        <name value="callType" />
-        <name value="should return IS_GQL" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="fetch-dog unit test suite.helpers unit tests.callType.should return IS_ORIGIN" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <ui>bdd</ui>
-      <extra-mocha-options>-r esm</extra-mocha-options>
-      <test-kind>TEST</test-kind>
-      <test-file>$PROJECT_DIR$/test/unit.specs.js</test-file>
-      <test-names>
-        <name value="fetch-dog unit test suite" />
-        <name value="helpers unit tests" />
-        <name value="callType" />
-        <name value="should return IS_ORIGIN" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="fetch-dog unit test suite.isGqlCall.should recognize a non gql call" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <ui>bdd</ui>
-      <extra-mocha-options>-r esm</extra-mocha-options>
-      <test-kind>TEST</test-kind>
-      <test-file>$PROJECT_DIR$/test/unit.specs.js</test-file>
-      <test-names>
-        <name value="fetch-dog unit test suite" />
-        <name value="isGqlCall" />
-        <name value="should recognize a non gql call" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="fetch-dog unit test suite.isOriginCall" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+    <configuration name="fetch-dog unit test suite" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
@@ -174,25 +103,91 @@
       <test-file>$PROJECT_DIR$/test/unit.specs.js</test-file>
       <test-names>
         <name value="fetch-dog unit test suite" />
-        <name value="isOriginCall" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="fetch-dog unit test suite.global unit tests.Should place a gql call" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options>-r esm</extra-mocha-options>
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/unit.specs.js</test-file>
+      <test-names>
+        <name value="fetch-dog unit test suite" />
+        <name value="global unit tests" />
+        <name value="Should place a gql call" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="fetch-dog unit test suite.global unit tests.Should place a standard http call" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options>-r esm</extra-mocha-options>
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/unit.specs.js</test-file>
+      <test-names>
+        <name value="fetch-dog unit test suite" />
+        <name value="global unit tests" />
+        <name value="Should place a standard http call" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="fetch-dog unit test suite.global unit tests.Should place an origin call" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options>-r esm</extra-mocha-options>
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/unit.specs.js</test-file>
+      <test-names>
+        <name value="fetch-dog unit test suite" />
+        <name value="global unit tests" />
+        <name value="Should place an origin call" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="fetch-dog unit test suite.helpers unit tests" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options>-r esm</extra-mocha-options>
+      <test-kind>SUITE</test-kind>
+      <test-file>$PROJECT_DIR$/test/unit.specs.js</test-file>
+      <test-names>
+        <name value="fetch-dog unit test suite" />
+        <name value="helpers unit tests" />
       </test-names>
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Node.js.server.js" />
-      <item itemvalue="Mocha.fetch-dog unit test suite.isGqlCall.should recognize a non gql call" />
-      <item itemvalue="Mocha.fetch-dog unit test suite.isOriginCall" />
-      <item itemvalue="Mocha.fetch-dog unit test suite.helpers unit tests.callType.should return IS_GQL" />
-      <item itemvalue="Mocha.fetch-dog unit test suite.helpers unit tests.callType.should return IS_ORIGIN" />
-      <item itemvalue="Mocha.fetch-dog unit test suite.helpers unit tests.callType.should return IS_DEFAULT" />
+      <item itemvalue="Mocha.fetch-dog unit test suite.global unit tests.Should place a gql call" />
+      <item itemvalue="Mocha.fetch-dog unit test suite.helpers unit tests" />
+      <item itemvalue="Mocha.fetch-dog unit test suite.global unit tests.Should place an origin call" />
+      <item itemvalue="Mocha.fetch-dog unit test suite.global unit tests.Should place a standard http call" />
+      <item itemvalue="Mocha.fetch-dog unit test suite" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Mocha.fetch-dog unit test suite.helpers unit tests.callType.should return IS_DEFAULT" />
-        <item itemvalue="Mocha.fetch-dog unit test suite.helpers unit tests.callType.should return IS_ORIGIN" />
-        <item itemvalue="Mocha.fetch-dog unit test suite.helpers unit tests.callType.should return IS_GQL" />
-        <item itemvalue="Mocha.fetch-dog unit test suite.isOriginCall" />
-        <item itemvalue="Mocha.fetch-dog unit test suite.isGqlCall.should recognize a non gql call" />
+        <item itemvalue="Mocha.fetch-dog unit test suite" />
+        <item itemvalue="Mocha.fetch-dog unit test suite.global unit tests.Should place a standard http call" />
+        <item itemvalue="Mocha.fetch-dog unit test suite.global unit tests.Should place an origin call" />
+        <item itemvalue="Mocha.fetch-dog unit test suite.helpers unit tests" />
+        <item itemvalue="Mocha.fetch-dog unit test suite.global unit tests.Should place a gql call" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595529939021</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="major refactor and cleanup">
+      <created>1595886517663</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1595886517663</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +253,8 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="major refactor and cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="major refactor and cleanup" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -264,10 +267,10 @@
       <screen x="0" y="23" width="1440" height="810" />
     </state>
     <state x="180" y="60" width="1128" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.810@0.23.1440.810" timestamp="1595535373897" />
-    <state x="100" y="123" width="1240" height="564" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1595883270800">
+    <state x="100" y="123" width="1240" height="564" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1595913759726">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state x="100" y="123" width="1240" height="564" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1440.810@0.23.1440.810" timestamp="1595883270800" />
+    <state x="100" y="123" width="1240" height="564" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1440.810@0.23.1440.810" timestamp="1595913759726" />
     <state x="355" y="197" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595528997587">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
@@ -280,95 +283,105 @@
       <screen x="0" y="23" width="1440" height="810" />
     </state>
     <state x="144" y="70" key="DiffContextDialog/0.23.1440.810@0.23.1440.810" timestamp="1595529014171" />
-    <state x="560" y="287" width="681" height="272" key="Github.ShareDialog" timestamp="1595529541435">
+    <state x="560" y="287" width="681" height="272" key="Github.ShareDialog" timestamp="1595886657509">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state x="560" y="287" width="681" height="272" key="Github.ShareDialog/0.23.1440.810@0.23.1440.810" timestamp="1595529541435" />
-    <state width="1222" height="180" key="GridCell.Tab.0.bottom" timestamp="1595884512951">
+    <state x="560" y="287" width="681" height="272" key="Github.ShareDialog/0.23.1440.810@0.23.1440.810" timestamp="1595886657509" />
+    <state width="1093" height="180" key="GridCell.Tab.0.bottom" timestamp="1595913853917">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state width="1222" height="180" key="GridCell.Tab.0.bottom/0.23.1440.810@0.23.1440.810" timestamp="1595884512951" />
-    <state width="1222" height="180" key="GridCell.Tab.0.center" timestamp="1595884512949">
+    <state width="1093" height="180" key="GridCell.Tab.0.bottom/0.23.1440.810@0.23.1440.810" timestamp="1595913853917" />
+    <state width="1093" height="180" key="GridCell.Tab.0.center" timestamp="1595913853915">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state width="1222" height="180" key="GridCell.Tab.0.center/0.23.1440.810@0.23.1440.810" timestamp="1595884512949" />
-    <state width="1222" height="180" key="GridCell.Tab.0.left" timestamp="1595884512949">
+    <state width="1093" height="180" key="GridCell.Tab.0.center/0.23.1440.810@0.23.1440.810" timestamp="1595913853915" />
+    <state width="1093" height="180" key="GridCell.Tab.0.left" timestamp="1595913853915">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state width="1222" height="180" key="GridCell.Tab.0.left/0.23.1440.810@0.23.1440.810" timestamp="1595884512949" />
-    <state width="1222" height="180" key="GridCell.Tab.0.right" timestamp="1595884512950">
+    <state width="1093" height="180" key="GridCell.Tab.0.left/0.23.1440.810@0.23.1440.810" timestamp="1595913853915" />
+    <state width="1093" height="180" key="GridCell.Tab.0.right" timestamp="1595913853916">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state width="1222" height="180" key="GridCell.Tab.0.right/0.23.1440.810@0.23.1440.810" timestamp="1595884512950" />
-    <state width="1222" height="271" key="GridCell.Tab.1.bottom" timestamp="1595882899784">
+    <state width="1093" height="180" key="GridCell.Tab.0.right/0.23.1440.810@0.23.1440.810" timestamp="1595913853916" />
+    <state width="1222" height="271" key="GridCell.Tab.1.bottom" timestamp="1595913763168">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state width="1222" height="271" key="GridCell.Tab.1.bottom/0.23.1440.810@0.23.1440.810" timestamp="1595882899784" />
-    <state width="1222" height="271" key="GridCell.Tab.1.center" timestamp="1595882899783">
+    <state width="1222" height="271" key="GridCell.Tab.1.bottom/0.23.1440.810@0.23.1440.810" timestamp="1595913763168" />
+    <state width="1222" height="271" key="GridCell.Tab.1.center" timestamp="1595913763168">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state width="1222" height="271" key="GridCell.Tab.1.center/0.23.1440.810@0.23.1440.810" timestamp="1595882899783" />
-    <state width="1222" height="271" key="GridCell.Tab.1.left" timestamp="1595882899783">
+    <state width="1222" height="271" key="GridCell.Tab.1.center/0.23.1440.810@0.23.1440.810" timestamp="1595913763168" />
+    <state width="1222" height="271" key="GridCell.Tab.1.left" timestamp="1595913763167">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state width="1222" height="271" key="GridCell.Tab.1.left/0.23.1440.810@0.23.1440.810" timestamp="1595882899783" />
-    <state width="1222" height="271" key="GridCell.Tab.1.right" timestamp="1595882899784">
+    <state width="1222" height="271" key="GridCell.Tab.1.left/0.23.1440.810@0.23.1440.810" timestamp="1595913763167" />
+    <state width="1222" height="271" key="GridCell.Tab.1.right" timestamp="1595913763168">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state width="1222" height="271" key="GridCell.Tab.1.right/0.23.1440.810@0.23.1440.810" timestamp="1595882899784" />
-    <state width="1222" height="271" key="GridCell.Tab.2.bottom" timestamp="1595882899787">
+    <state width="1222" height="271" key="GridCell.Tab.1.right/0.23.1440.810@0.23.1440.810" timestamp="1595913763168" />
+    <state width="1222" height="271" key="GridCell.Tab.2.bottom" timestamp="1595913763169">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state width="1222" height="271" key="GridCell.Tab.2.bottom/0.23.1440.810@0.23.1440.810" timestamp="1595882899787" />
-    <state width="1222" height="271" key="GridCell.Tab.2.center" timestamp="1595882899784">
+    <state width="1222" height="271" key="GridCell.Tab.2.bottom/0.23.1440.810@0.23.1440.810" timestamp="1595913763169" />
+    <state width="1222" height="271" key="GridCell.Tab.2.center" timestamp="1595913763169">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state width="1222" height="271" key="GridCell.Tab.2.center/0.23.1440.810@0.23.1440.810" timestamp="1595882899784" />
-    <state width="1222" height="271" key="GridCell.Tab.2.left" timestamp="1595882899784">
+    <state width="1222" height="271" key="GridCell.Tab.2.center/0.23.1440.810@0.23.1440.810" timestamp="1595913763169" />
+    <state width="1222" height="271" key="GridCell.Tab.2.left" timestamp="1595913763169">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state width="1222" height="271" key="GridCell.Tab.2.left/0.23.1440.810@0.23.1440.810" timestamp="1595882899784" />
-    <state width="1222" height="271" key="GridCell.Tab.2.right" timestamp="1595882899787">
+    <state width="1222" height="271" key="GridCell.Tab.2.left/0.23.1440.810@0.23.1440.810" timestamp="1595913763169" />
+    <state width="1222" height="271" key="GridCell.Tab.2.right" timestamp="1595913763169">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state width="1222" height="271" key="GridCell.Tab.2.right/0.23.1440.810@0.23.1440.810" timestamp="1595882899787" />
-    <state width="1222" height="271" key="GridCell.Tab.3.bottom" timestamp="1595882899789">
+    <state width="1222" height="271" key="GridCell.Tab.2.right/0.23.1440.810@0.23.1440.810" timestamp="1595913763169" />
+    <state width="1222" height="271" key="GridCell.Tab.3.bottom" timestamp="1595913763171">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state width="1222" height="271" key="GridCell.Tab.3.bottom/0.23.1440.810@0.23.1440.810" timestamp="1595882899789" />
-    <state width="1222" height="271" key="GridCell.Tab.3.center" timestamp="1595882899788">
+    <state width="1222" height="271" key="GridCell.Tab.3.bottom/0.23.1440.810@0.23.1440.810" timestamp="1595913763171" />
+    <state width="1222" height="271" key="GridCell.Tab.3.center" timestamp="1595913763170">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state width="1222" height="271" key="GridCell.Tab.3.center/0.23.1440.810@0.23.1440.810" timestamp="1595882899788" />
-    <state width="1222" height="271" key="GridCell.Tab.3.left" timestamp="1595882899788">
+    <state width="1222" height="271" key="GridCell.Tab.3.center/0.23.1440.810@0.23.1440.810" timestamp="1595913763170" />
+    <state width="1222" height="271" key="GridCell.Tab.3.left" timestamp="1595913763170">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state width="1222" height="271" key="GridCell.Tab.3.left/0.23.1440.810@0.23.1440.810" timestamp="1595882899788" />
-    <state width="1222" height="271" key="GridCell.Tab.3.right" timestamp="1595882899788">
+    <state width="1222" height="271" key="GridCell.Tab.3.left/0.23.1440.810@0.23.1440.810" timestamp="1595913763170" />
+    <state width="1222" height="271" key="GridCell.Tab.3.right" timestamp="1595913763171">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state width="1222" height="271" key="GridCell.Tab.3.right/0.23.1440.810@0.23.1440.810" timestamp="1595882899788" />
+    <state width="1222" height="271" key="GridCell.Tab.3.right/0.23.1440.810@0.23.1440.810" timestamp="1595913763171" />
     <state x="104" y="23" key="SettingsEditor" timestamp="1595533783189">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
     <state x="104" y="23" key="SettingsEditor/0.23.1440.810@0.23.1440.810" timestamp="1595533783189" />
-    <state x="220" y="82" key="Vcs.Push.Dialog.v2" timestamp="1595529959620">
+    <state x="220" y="82" key="Vcs.Push.Dialog.v2" timestamp="1595886576729">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state x="220" y="82" key="Vcs.Push.Dialog.v2/0.23.1440.810@0.23.1440.810" timestamp="1595529959620" />
+    <state x="220" y="82" key="Vcs.Push.Dialog.v2/0.23.1440.810@0.23.1440.810" timestamp="1595886576729" />
     <state x="347" y="97" width="745" height="616" key="find.popup" timestamp="1595788561521">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
     <state x="347" y="97" width="745" height="616" key="find.popup/0.23.1440.810@0.23.1440.810" timestamp="1595788561521" />
-    <state x="426" y="280" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1595528850849">
+    <state x="426" y="280" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1595886636003">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state x="426" y="280" key="git4idea.remote.GitConfigureRemotesDialog/0.23.1440.810@0.23.1440.810" timestamp="1595528850849" />
+    <state x="426" y="280" key="git4idea.remote.GitConfigureRemotesDialog/0.23.1440.810@0.23.1440.810" timestamp="1595886636003" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/helpers.js</url>
+          <line>106</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="mocha-javascript-test-runner">
-        <watch expression="!!Object.values(headers).filter((v) =&gt; v.toLowerCase() === 'application/json').length" language="JavaScript" />
+        <watch expression="payload" language="JavaScript" />
       </configuration>
     </watches-manager>
   </component>

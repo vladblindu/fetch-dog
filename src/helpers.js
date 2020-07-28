@@ -1,13 +1,12 @@
-import {
-  BASE_URL,
-  DEFAULT_GQL_ENDPOINT,
-  IS_DEFAULT,
-  IS_GQL,
-  IS_ORIGIN,
-  ORIGIN_URL,
-  TOKEN_KEY
-} from './constants'
+import { BASE_URL, DEFAULT_GQL_ENDPOINT, IS_DEFAULT, IS_GQL, IS_ORIGIN, ORIGIN_URL, TOKEN_KEY } from './constants'
 import urlJoin from 'url-join'
+
+/**
+ * @param {object} e
+ */
+export const fatality = e => {
+  throw new e
+}
 
 /**
  * @param {object} config
@@ -44,16 +43,18 @@ export const authHeader = (config) => ({
  * @param {object} params
  * @param {object} params.headers
  */
-export const execCall = (http, params) => {
-  const { url, ...rest } = params
-  checkReturnsJson(params.headers)
-    ? http(url, rest)
-      .then((res) => res.json())
+export const execCall = (http, { url, headers, ...rest }) =>
+  checkReturnsJson(headers)
+    ? http(url, { headers, ...rest })
+      .then(
+        (res) =>
+          res.json()
+      )
       .catch((e) => {
         throw e
       })
-    : http(url, rest)
-}
+    : http(url, { headers, ...rest })
+
 
 /**
  * @param {string} url
@@ -110,7 +111,7 @@ export const setParams = config => {
         headers: {
           ...(config.baseHeaders || {}),
           ...(endpoint.auth ? authHeader(config) : {}),
-          ...(config.endpoints.gqlEndpoint.headers || {})
+          ...(endpoint.headers || {})
         },
         method: method || endpoint.method,
         body: JSON.stringify(payload)
@@ -121,9 +122,9 @@ export const setParams = config => {
       url: urlJoin(webOrigin, url.replace(ORIGIN_URL, '')),
       method: 'GET',
       headers: {
-        ...(config.baseHeaders || {}),
-        body: null
-      }
+        ...(config.baseHeaders || {})
+      },
+      body: null
     }),
     // index 2  - gqlCall
     (url) => ({

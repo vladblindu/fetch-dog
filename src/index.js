@@ -1,4 +1,4 @@
-import { callType, execCall, setHttpAgent, setParams } from './helpers'
+import { callType, execCall, fatality, setHttpAgent, setParams } from './helpers'
 
 /**
  * @name fetchDog
@@ -14,14 +14,12 @@ import { callType, execCall, setHttpAgent, setParams } from './helpers'
  * @returns {(function(*=): function(*=, *=, *=): void)|(function(*=, *=, *=, *=): void)}
  */
 const fetchDog = (config) => {
-  // set the httpAgent
-  const fatality = e => throw new Error(e)
 
-  return (endpointName, payload, method, param) => {
+  return (endpointName, payload = {}, method, param) => {
     const callParams = setParams(config)[callType(endpointName)]
     return execCall(
       setHttpAgent(config) || fatality('No fetch available and no other http agent provided. Fatal error.'),
-      callParams(endpointName, payload = {}, method, param)
+      callParams(endpointName, payload, method, param)
     )
   }
 }
