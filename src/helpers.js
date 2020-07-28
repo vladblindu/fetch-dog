@@ -9,7 +9,7 @@ export const fatality = e => {
 }
 
 /**
- * @param {object} config
+ * @param {config} config
  * @param {function} config.httpAgent
  * @returns {*}
  */
@@ -27,7 +27,7 @@ export const checkReturnsJson = (headers) =>
     .length
 
 /**
- * @param {object} config
+ * @param {config} config
  * @param {function?} config.token
  * @param {string?} config.tokenKey
  * @returns {*}
@@ -76,13 +76,7 @@ export const callType = (url) =>
   isGqlCall(url) ? IS_GQL : isOriginCall(url) ? IS_ORIGIN : IS_DEFAULT
 
 /**
- *
- * @param config
- * @param {function?} config.httpAgent
- * @param {function?} config.token
- * @param {string?} config.tokenKey
- * @param {string} config.baseUrl
- * @param.{object} config.endpoints
+ * @param {config} config
  * @param {object} config.endpoints.gqlEndpoint
  * @param {object?} config.baseHeaders
  * @returns {[
@@ -92,7 +86,6 @@ export const callType = (url) =>
  * ]}
  */
 export const setParams = config => {
-
   config.baseUrl = config.baseUrl || BASE_URL
   config.endpoints.gqlEndpoint = {
     ...DEFAULT_GQL_ENDPOINT,

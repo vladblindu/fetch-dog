@@ -1,3 +1,15 @@
+/**
+ * @type {object} config
+ * @param {object} config
+ * @param {function?} config.httpAgent
+ * @param {function?} config.token
+ * @param {string?} config.tokenKey
+ * @param {string} config.baseUrl
+ * @param.{object} config.endpoints
+ * @param {object} config.endpoints.gqlEndpoint
+ * @param {object?} config.baseHeaders
+ */
+
 export const TOKEN_KEY = 'token'
 export const BASE_URL = 'http://localhost:1337'
 export const ORIGIN_URL = 'origin:/'

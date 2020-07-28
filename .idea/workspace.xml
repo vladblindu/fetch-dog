@@ -13,6 +13,7 @@
     <list default="true" id="a0545524-6c7b-4b7c-a37e-06ef69d0b5f8" name="Default Changelist" comment="major refactor and cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/unit.specs.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/unit.specs.js" afterDir="false" />
@@ -37,7 +38,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="hooks" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -231,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595886517663</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="major refactor and cleanup">
+      <created>1595915955719</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1595915955719</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,22 +295,22 @@
       <screen x="0" y="23" width="1440" height="810" />
     </state>
     <state x="560" y="287" width="681" height="272" key="Github.ShareDialog/0.23.1440.810@0.23.1440.810" timestamp="1595886657509" />
-    <state width="1093" height="180" key="GridCell.Tab.0.bottom" timestamp="1595913853917">
+    <state width="1093" height="180" key="GridCell.Tab.0.bottom" timestamp="1595918085524">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state width="1093" height="180" key="GridCell.Tab.0.bottom/0.23.1440.810@0.23.1440.810" timestamp="1595913853917" />
-    <state width="1093" height="180" key="GridCell.Tab.0.center" timestamp="1595913853915">
+    <state width="1093" height="180" key="GridCell.Tab.0.bottom/0.23.1440.810@0.23.1440.810" timestamp="1595918085524" />
+    <state width="1093" height="180" key="GridCell.Tab.0.center" timestamp="1595918085523">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state width="1093" height="180" key="GridCell.Tab.0.center/0.23.1440.810@0.23.1440.810" timestamp="1595913853915" />
-    <state width="1093" height="180" key="GridCell.Tab.0.left" timestamp="1595913853915">
+    <state width="1093" height="180" key="GridCell.Tab.0.center/0.23.1440.810@0.23.1440.810" timestamp="1595918085523" />
+    <state width="1093" height="180" key="GridCell.Tab.0.left" timestamp="1595918085522">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state width="1093" height="180" key="GridCell.Tab.0.left/0.23.1440.810@0.23.1440.810" timestamp="1595913853915" />
-    <state width="1093" height="180" key="GridCell.Tab.0.right" timestamp="1595913853916">
+    <state width="1093" height="180" key="GridCell.Tab.0.left/0.23.1440.810@0.23.1440.810" timestamp="1595918085522" />
+    <state width="1093" height="180" key="GridCell.Tab.0.right" timestamp="1595918085523">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state width="1093" height="180" key="GridCell.Tab.0.right/0.23.1440.810@0.23.1440.810" timestamp="1595913853916" />
+    <state width="1093" height="180" key="GridCell.Tab.0.right/0.23.1440.810@0.23.1440.810" timestamp="1595918085523" />
     <state width="1222" height="271" key="GridCell.Tab.1.bottom" timestamp="1595913763168">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
@@ -355,10 +363,10 @@
       <screen x="0" y="23" width="1440" height="810" />
     </state>
     <state x="104" y="23" key="SettingsEditor/0.23.1440.810@0.23.1440.810" timestamp="1595533783189" />
-    <state x="220" y="82" key="Vcs.Push.Dialog.v2" timestamp="1595886576729">
+    <state x="220" y="82" key="Vcs.Push.Dialog.v2" timestamp="1595915959549">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
-    <state x="220" y="82" key="Vcs.Push.Dialog.v2/0.23.1440.810@0.23.1440.810" timestamp="1595886576729" />
+    <state x="220" y="82" key="Vcs.Push.Dialog.v2/0.23.1440.810@0.23.1440.810" timestamp="1595915959549" />
     <state x="347" y="97" width="745" height="616" key="find.popup" timestamp="1595788561521">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
@@ -369,16 +377,6 @@
     <state x="426" y="280" key="git4idea.remote.GitConfigureRemotesDialog/0.23.1440.810@0.23.1440.810" timestamp="1595886636003" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/helpers.js</url>
-          <line>106</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="mocha-javascript-test-runner">
         <watch expression="payload" language="JavaScript" />

@@ -1,5 +1,5 @@
 import * as chai from 'chai'
-import fetchDog from '../src'
+import { fetchDog } from '../src'
 import { authHeader, callType, checkReturnsJson, execCall, isGqlCall, isOriginCall, setParams } from '../src/helpers'
 import { DEFAULT_GQL_ENDPOINT, IS_DEFAULT, IS_GQL, IS_ORIGIN, ORIGIN_URL } from '../src/constants'
 
