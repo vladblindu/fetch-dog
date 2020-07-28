@@ -4,6 +4,8 @@
 # FETCH-DOG
 ### React app http agent
 
+##TODO Decent docs
+
 [![version](https://img.shields.io/github/package-json/version/vladblindu/fetch-dog)](https://semver.org)
 [![<ORG_NAME>](https://circleci.com/gh/vladblindu/fetch-dog.svg?style=shield)](https://app.circleci.com/pipelines/github/vladblindu/fetch-dog)
 [![NPM](https://img.shields.io/npm/v/fetch-dog.svg)](https://www.npmjs.com/package/fetch-dog)
