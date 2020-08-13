@@ -11,18 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0545524-6c7b-4b7c-a37e-06ef69d0b5f8" name="Default Changelist" comment="Minor increment&#10;1.1.0&#10;&#10;http call:&#10;- if typefo params === object url encode params and append string&#10;&#10;Adde HttpProvider and useHttp hook">
-      <change afterPath="$PROJECT_DIR$/example/src/components/test-component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mock-server/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/example/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock-server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/mock-server/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +78,9 @@
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/example" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -219,7 +215,7 @@
       <workItem from="1597243367522" duration="444000" />
       <workItem from="1597244038619" duration="634000" />
       <workItem from="1597266142268" duration="107000" />
-      <workItem from="1597290871638" duration="2741000" />
+      <workItem from="1597290871638" duration="3571000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1595528470265</created>
@@ -249,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595886517663</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Minor increment&#10;1.1.0&#10;&#10;http call:&#10;- if typefo params === object url encode params and append string&#10;&#10;Adde HttpProvider and useHttp hook">
+      <created>1597293629309</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1597293629309</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
