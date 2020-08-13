@@ -2,6 +2,14 @@ import { BASE_URL, DEFAULT_GQL_ENDPOINT, IS_DEFAULT, IS_GQL, IS_ORIGIN, ORIGIN_U
 import urlJoin from 'url-join'
 
 /**
+ *
+ * @param {object} params
+ * @returns {string}
+ */
+const encodeGetParams = params =>
+  Object.entries(params).map(kv => kv.map(encodeURIComponent).join('=')).join('&')
+
+/**
  * @param {object} e
  */
 export const fatality = e => {
@@ -46,10 +54,7 @@ export const authHeader = (config) => ({
 export const execCall = (http, { url, headers, ...rest }) =>
   checkReturnsJson(headers)
     ? http(url, { headers, ...rest })
-      .then(
-        (res) =>
-          res.json()
-      )
+      .then((res) => res.ok ? res.json() : res)
       .catch((e) => {
         throw e
       })
@@ -96,11 +101,13 @@ export const setParams = config => {
 
   return [
     // index 0 - defaultCall
-    (endpointName, payload, method, param = '') => {
+    (endpointName, payload, method, params = '') => {
       const endpoint = config.endpoints[endpointName]
       if (!endpoint) throw new Error(`${endpointName} endpoint is not registered`)
+      if (typeof params === 'object')
+        params = encodeGetParams(params)
       return {
-        url: urlJoin(config.baseUrl, endpoint.url, param),
+        url: urlJoin(config.baseUrl, endpoint.url, params),
         headers: {
           ...(config.baseHeaders || {}),
           ...(endpoint.auth ? authHeader(config) : {}),

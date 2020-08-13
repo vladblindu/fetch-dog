@@ -7,7 +7,9 @@
  * @param {string} config.baseUrl
  * @param.{object} config.endpoints
  * @param {object} config.endpoints.gqlEndpoint
- * @param {object?} config.baseHeaders
+ * @param {object?} config.baseHeaders,
+ * @param {function} config.redirect
+ * @param {object} config.errorPages
  */
 
 export const TOKEN_KEY = 'token'
@@ -25,3 +27,6 @@ export const DEFAULT_GQL_ENDPOINT = {
 export const IS_GQL = 2
 export const IS_ORIGIN = 1
 export const IS_DEFAULT = 0
+export const GQL = 'gql'
+export const HTTP = 'http'
+export const ORIGIN = 'origin'

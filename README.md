@@ -27,8 +27,10 @@ import React from 'react
 import fetchDog from 'fetch-dog'
 import httpConfig from './config/http-agent.config.json'
 
-const useHttpAgent = fetchDog
+const fetchDogHttpAgent = fetchDog
 ```
+
+
 
 ## License
 
