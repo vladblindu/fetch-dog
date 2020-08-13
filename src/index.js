@@ -1,6 +1,22 @@
 import React from 'react'
 import { callType, execCall, fatality, setHttpAgent, setParams } from './helpers'
-export { IS_DEFAULT, IS_GQL, IS_ORIGIN, ORIGIN, GQL, HTTP } from './constants'
+import { IS_DEFAULT, IS_GQL, IS_ORIGIN } from './constants'
+
+export { IS_DEFAULT, IS_GQL, IS_ORIGIN, ORIGIN, GQL, HTTP, DEFAULT_HTTP_METHOD } from './constants'
+
+const hasContent = o => !!Object.keys(o).length
+
+/**
+ * @param config
+ * @returns {function(*)}
+ */
+const redirector = config => res => {
+  if (res.ok || !(config.redirect && config.errorPages && hasContent(config.errorPages)))
+    return res
+  if (!res.error) res.error = true
+  config.redirect(config.errorPages[res.status])
+  return res
+}
 
 /**
  * @name fetchDog
@@ -16,6 +32,7 @@ export const fetchDog = (config) => {
       setHttpAgent(config) || fatality('No fetch available and no other http agent provided. Fatal error.'),
       callParams(endpointName, payload, method, param)
     )
+      .then(redirector(config))
   }
 }
 
@@ -44,7 +61,7 @@ export const fetchDogOrigin = (config) => (url) => {
   return execCall(
     setHttpAgent(config) || fatality('No fetch available and no other http agent provided. Fatal error.'),
     callParams(url)
-  )
+  ).then(redirector)
 }
 
 /**
@@ -61,25 +78,14 @@ export const fetchDogHttp = (config) => (endpointName, payload, method, param) =
   )
 }
 
-/**
- * @param config
- * @returns {function(*)}
- */
-const redirector = config => res => {
-  if (res.ok) return res
-  if (!res.error) res.error = true
-  config.redirect(config.errorPages[res.status])
-  return res
-}
-
 const HttpContext = React.createContext({})
 
 export const HttpProvider = ({ config, children }) => {
 
   const value = {
-    gql: fetchDogGql.then(redirector(config)),
-    http: fetchDogHttp.then(redirector(config)),
-    origin: fetchDogOrigin.then(redirector(config))
+    gql: fetchDogGql(config),
+    http: fetchDogHttp(config),
+    origin: fetchDogOrigin(config)
   }
 
   return <HttpContext.Provider value={value}>

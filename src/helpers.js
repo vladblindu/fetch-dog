@@ -1,4 +1,13 @@
-import { BASE_URL, DEFAULT_GQL_ENDPOINT, IS_DEFAULT, IS_GQL, IS_ORIGIN, ORIGIN_URL, TOKEN_KEY } from './constants'
+import {
+  BASE_URL,
+  DEFAULT_GQL_ENDPOINT,
+  DEFAULT_HTTP_METHOD, GET,
+  IS_DEFAULT,
+  IS_GQL,
+  IS_ORIGIN,
+  ORIGIN_URL,
+  TOKEN_KEY
+} from './constants'
 import urlJoin from 'url-join'
 
 /**
@@ -102,25 +111,33 @@ export const setParams = config => {
   return [
     // index 0 - defaultCall
     (endpointName, payload, method, params = '') => {
-      const endpoint = config.endpoints[endpointName]
-      if (!endpoint) throw new Error(`${endpointName} endpoint is not registered`)
-      if (typeof params === 'object')
+
+      if (params && (typeof params === 'object'))
         params = encodeGetParams(params)
+
+      const endpoint = config.endpoints[endpointName]
+
       return {
-        url: urlJoin(config.baseUrl, endpoint.url, params),
+        url: urlJoin(
+          config.baseUrl,
+          endpoint && endpoint.url
+            ? endpoint.url
+            : '/'.concat(endpointName),
+          params
+        ),
         headers: {
           ...(config.baseHeaders || {}),
           ...(endpoint.auth ? authHeader(config) : {}),
           ...(endpoint.headers || {})
         },
-        method: method || endpoint.method,
+        method: method || (endpoint && endpoint.method) || DEFAULT_HTTP_METHOD,
         body: JSON.stringify(payload)
       }
     },
     // index 1 - originCall
     (url) => ({
       url: urlJoin(webOrigin, url.replace(ORIGIN_URL, '')),
-      method: 'GET',
+      method: GET,
       headers: {
         ...(config.baseHeaders || {})
       },

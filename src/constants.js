@@ -15,8 +15,11 @@
 export const TOKEN_KEY = 'token'
 export const BASE_URL = 'http://localhost:1337'
 export const ORIGIN_URL = 'origin:/'
-const DEFAULT_GQL_METHOD = 'POST'
+export const POST = 'POST'
+const DEFAULT_GQL_METHOD = POST
 const DEFAULT_GQL_ENDPOINT_URL = '/graphql'
+export const DEFAULT_HTTP_METHOD = 'GET'
+export const GET = 'GET'
 
 export const DEFAULT_GQL_ENDPOINT = {
   gqlMethod: DEFAULT_GQL_METHOD,

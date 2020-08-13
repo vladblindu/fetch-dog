@@ -8,11 +8,11 @@ app.use(bodyParser.json())
 app.options('*', cors())
 
 app.post('/http-post', (req, res) => {
-
+  res.json({ ok: true })
 })
 
 app.get('/http-get', (req, res) => {
-
+  res.json({ ok: true })
 })
 
 const server = app.listen(3003, () => {
