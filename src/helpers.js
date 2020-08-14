@@ -65,7 +65,11 @@ export const execCall = (http, { url, headers, ...rest }) =>
     ? http(url, { headers, ...rest })
       .then((res) => res.ok ? res.json() : res)
       .catch((e) => {
-        throw e
+        const tmp = { ok: false, error: true }
+        if (e.toString() === 'TypeError: Failed to fetch')
+          tmp.status = 503
+        else tmp.status = 509
+        return tmp
       })
     : http(url, { headers, ...rest })
 
@@ -115,12 +119,12 @@ export const setParams = config => {
       if (params && (typeof params === 'object'))
         params = encodeGetParams(params)
 
-      const endpoint = config.endpoints[endpointName]
+      const endpoint = config.endpoints[endpointName] || {}
 
       return {
         url: urlJoin(
           config.baseUrl,
-          endpoint && endpoint.url
+          endpoint.url
             ? endpoint.url
             : '/'.concat(endpointName),
           params

@@ -8,11 +8,15 @@ app.use(bodyParser.json())
 app.options('*', cors())
 
 app.post('/http-post', (req, res) => {
-  res.json({ ok: true })
+  res.json({ ok: 'Post request successful' })
 })
 
 app.get('/http-get', (req, res) => {
-  res.json({ ok: true })
+  res.json({ ok: 'Get request successful' })
+})
+
+app.get('*', (req, res) => {
+  res.status(req.url.replace('/', '')).json({ ok: req.url })
 })
 
 const server = app.listen(3003, () => {

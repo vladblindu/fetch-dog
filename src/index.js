@@ -1,6 +1,7 @@
 import React from 'react'
 import { callType, execCall, fatality, setHttpAgent, setParams } from './helpers'
 import { IS_DEFAULT, IS_GQL, IS_ORIGIN } from './constants'
+import { useHistory } from 'react-router-dom'
 
 export { IS_DEFAULT, IS_GQL, IS_ORIGIN, ORIGIN, GQL, HTTP, DEFAULT_HTTP_METHOD } from './constants'
 
@@ -14,7 +15,8 @@ const redirector = config => res => {
   if (res.ok || !(config.redirect && config.errorPages && hasContent(config.errorPages)))
     return res
   if (!res.error) res.error = true
-  config.redirect(config.errorPages[res.status])
+  console.log(config.errorPages)
+  config.redirect(config.errorPages[res.status] || config.errorPages.default || '/509')
   return res
 }
 
@@ -31,8 +33,7 @@ export const fetchDog = (config) => {
     return execCall(
       setHttpAgent(config) || fatality('No fetch available and no other http agent provided. Fatal error.'),
       callParams(endpointName, payload, method, param)
-    )
-      .then(redirector(config))
+    ).then(redirector(config))
   }
 }
 
@@ -47,7 +48,7 @@ export const fetchDogGql = (config) => (query) => {
   return execCall(
     setHttpAgent(config) || fatality('No fetch available and no other http agent provided. Fatal error.'),
     callParams(query)
-  )
+  ).then(redirector)
 }
 
 /**
@@ -75,13 +76,16 @@ export const fetchDogHttp = (config) => (endpointName, payload, method, param) =
   return execCall(
     setHttpAgent(config) || fatality('No fetch available and no other http agent provided. Fatal error.'),
     callParams(endpointName, payload, method, param)
-  )
+  ).then(redirector(config))
 }
 
 const HttpContext = React.createContext({})
 
 export const HttpProvider = ({ config, children }) => {
 
+  const history = useHistory()
+
+  config.redirect = history.push
   const value = {
     gql: fetchDogGql(config),
     http: fetchDogHttp(config),
@@ -95,7 +99,7 @@ export const HttpProvider = ({ config, children }) => {
 
 export const useHttp = callType => {
   const context = React.useContext(HttpContext)
-  const httpAgent = context[callType]
+  const httpAgent = context[callType.toLowerCase().trim()]
   if (!httpAgent) throw new Error('DEVERR: Wrong callType argument provided to useHttp hook.')
   return httpAgent
 }

@@ -4,15 +4,16 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ../node_modules/react-scripts/bin/react-scripts.js starty",
+    "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
     "build": "node ../node_modules/react-scripts/bin/react-scripts.js build",
     "test": "node ../node_modules/react-scripts/bin/react-scripts.js test",
     "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
   },
   "dependencies": {
     "fetch-dog": "link:..",
-    "react": "link:../node_modules/react",
+    "react-router-dom": "link:../node_modules/react-router-dom",
     "react-dom": "link:../node_modules/react-dom",
+    "react": "link:../node_modules/react",
     "react-scripts": "link:../node_modules/react-scripts"
   },
   "devDependencies": {
