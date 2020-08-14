@@ -21,6 +21,7 @@ yarn add @vladblindu/fetch-dog
 
 ## Usage
 
+#### !!! Reuires a BrowserRouter HOC to automaticaly redirect to error pages
 Create a http-agent file in the ./src folder with the following content
 ```jsx
 import React from 'react
