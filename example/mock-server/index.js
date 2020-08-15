@@ -16,7 +16,10 @@ app.get('/http-get', (req, res) => {
 })
 
 app.get('*', (req, res) => {
-  res.status(req.url.replace('/', '')).json({ ok: req.url })
+  const status = req.url === '/default'
+    ? '/509'
+    : req.url.replace('/', '')
+  res.status(status).json({ ok: req.url })
 })
 
 const server = app.listen(3003, () => {

@@ -15,7 +15,6 @@ const redirector = config => res => {
   if (res.ok || !(config.redirect && config.errorPages && hasContent(config.errorPages)))
     return res
   if (!res.error) res.error = true
-  console.log(config.errorPages)
   config.redirect(config.errorPages[res.status] || config.errorPages.default || '/509')
   return res
 }
@@ -83,9 +82,11 @@ const HttpContext = React.createContext({})
 
 export const HttpProvider = ({ config, children }) => {
 
-  const history = useHistory()
+  // handle redirection if a BrowserRouter HOC is available
+  const history = useHistory && useHistory()
+  if (history) config.redirect = history.push
+  else console.log('HOC ERROR: history is undefined. Self redirection disabled')
 
-  config.redirect = history.push
   const value = {
     gql: fetchDogGql(config),
     http: fetchDogHttp(config),
@@ -99,6 +100,8 @@ export const HttpProvider = ({ config, children }) => {
 
 export const useHttp = callType => {
   const context = React.useContext(HttpContext)
+  if (!context || !hasContent(context))
+    throw new Error('DEVERR: No HOC context available for useHttp hook.')
   const httpAgent = context[callType.toLowerCase().trim()]
   if (!httpAgent) throw new Error('DEVERR: Wrong callType argument provided to useHttp hook.')
   return httpAgent

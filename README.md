@@ -31,7 +31,9 @@ import httpConfig from './config/http-agent.config.json'
 const fetchDogHttpAgent = fetchDog
 ```
 
+#### Change log
 
+1.0.1 - added DEVERR rejection for missing http context
 
 ## License
 
